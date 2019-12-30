@@ -1,3 +1,7 @@
-# Estimating morphological complexity from predictiveness of sequences of sub-words
+# Productivity and Predictability for Measuring Morphological Complexity
 
-``python main.py --input directory``
+Repository that contains the code for calculating the entropy rate of a subword language model:
+
+``python main.py --input_directory``
+
+input_directory is a directory containing a parallel corpus, where each file corresponds to each language 

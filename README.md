@@ -6,7 +6,7 @@ Repository that contains the code for calculating the entropy rate of a subword 
 
 input_directory is a directory containing a parallel corpus, where each file corresponds to a language 
 
-The corpora for the languages mentioned in the article was pre-processed and extracted from:
+Corpora for the languages mentioned in the article were pre-processed and extracted from:
 - [The Parallel Bible Corpus](http://www.christianbentz.de/MLC2019_data.html) 
 - [JW300](http://opus.nlpl.eu/JW300.php)
 

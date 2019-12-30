@@ -1,6 +1,14 @@
 # Productivity and Predictability for Measuring Morphological Complexity
 
-Repository that contains the code for calculating the entropy rate of a subword language model:
+
+Repository that contains the code for calculating the entropy rate of a subword language model. This is part of the article [Productivity and Predictability for Measuring Morphological Complexity](https://www.mdpi.com/1099-4300/22/1/48)
+
+This program runs in python 3. The program uses the next libraries:
+
+* Standard pyhton libraries (numpy, collections, itertools, random, re)
+* nltk (Natural Language Toolkit) https://www.nltk.org/ 
+
+## Basic Usage
 
 ``python main.py --input_directory``
 

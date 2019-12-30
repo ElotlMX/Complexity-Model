@@ -12,7 +12,7 @@ This program runs in python 3. The program uses the next libraries:
 
 ``python main.py --input_directory``
 
-input_directory is a directory containing a parallel corpus, where each file corresponds to a language 
+input_directory should be a directory containing a parallel corpus, where each file corresponds to a language (each file must be already tokenized). 
 
 Corpora for the languages mentioned in the article were pre-processed and extracted from:
 - [The Parallel Bible Corpus](http://www.christianbentz.de/MLC2019_data.html) 

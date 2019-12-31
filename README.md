@@ -18,3 +18,15 @@ Corpora for the languages mentioned in the article were pre-processed and extrac
 - [The Parallel Bible Corpus](http://www.christianbentz.de/MLC2019_data.html) 
 - [JW300](http://opus.nlpl.eu/JW300.php)
 
+### Parameters for the entropy rate of the neural probabilistic language model:
+* n : the size of n-grams. Default is 3
+* iter : number of iterations to train the neural network. Default is 50
+* emb_dim : Number of dimensions in embedding vectors. Default is 300
+* hid_dim : Number of dimensions in hidden layer. Default is 100
+
+To run the model with different parameters, execute the program as in the following example:
+
+``python3 main.py --input corpora --output results/results.csv --n 1 --iter 100``
+
+
+

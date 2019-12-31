@@ -4,10 +4,19 @@ from charNgrams import nPhones
 from argparse import ArgumentParser
 import os
 
-
+#Arguments
 parser = ArgumentParser(description="model")
 parser.add_argument('--input', nargs='?', default='/home/tlacomiston/Downloads/ENTROPY_data/script/corpora/',
 	                    help='name of directory')
+parser.add_argument('--n', nargs='?', default=3,
+	                    help='size of n-grams')
+parser.add_argument('--iter', nargs='?', default=51,
+	                    help='number of iterations')
+parser.add_argument('--emb_dim', nargs='?', default=300,
+	                    help='number of dimensions in embedding vectors')
+parser.add_argument('--hid_dim', nargs='?', default=100,
+	                    help='number of dimensions in hidden layer of NN')
+
 args = parser.parse_args()
 
 directory = args.input
@@ -18,13 +27,13 @@ for n in all_files:
   file=open(inputcorpus,'r', encoding="utf-8")
 
   #extrae los nphones, variar este parámetro implica tomar uniphones, triphones u otros
-  phones = nPhones(file.read(),nphone_siz=1)
+  phones = nPhones(file.read(),nphone_siz=int(args.n))
   phones.get_phones()
 
   print('\n\nCorpus:',n)
   #Aprende el modelo de Bengio
-  model = Model(phones.word_phones, ngramas=2)
-  model.train(its=51, batch=300)
+  model = Model(phones.word_phones, dim=int(args.emb_dim), nn_hdim=int(args.hid_dim), ngramas=2)
+  model.train(its=int(args.iter), batch=300)
   
   #Tamaño de nphones
   N = len(phones.voc)

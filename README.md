@@ -26,7 +26,7 @@ Corpora for the languages mentioned in the article were pre-processed and extrac
 
 To run the model with different parameters, execute the program as in the following example:
 
-``python3 main.py --input corpora --output results/results.csv --n 1 --iter 100``
+``python3 main.py --input_directory --output results/results.csv --n 1 --iter 100``
 
 
 
